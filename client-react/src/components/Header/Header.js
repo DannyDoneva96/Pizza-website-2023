@@ -11,28 +11,28 @@ export const Header = (props) => {
 
        <header className="header">
         <div className="navbar">
-          <div >
+          <div > 
             <img  className="logo-nav"src={logo} />
           </div>
           {/*NOT AUTH*/}
           {!user
                    ? 
           <ul className="nav-links" >
-            <li > Home </li>
-            <li > Menu </li>
-            <li > About </li>
-            <li> Contact </li>
-            <li > Login </li>
-            <li > Register </li>
-            <li ><i className="fa-solid fa-cart-plus" /></li>
+            <li>< Link to="/" > Home </Link></li>
+            <li ><Link to="/menu" > Menu </Link></li>
+            <li ><Link to="/about" > About</Link> </li>
+            <li ><Link to="/contact"> Contact </Link></li>
+            <li>< Link to="/login"> Login </Link></li>
+            <li>< Link to="/register"> Register</Link> </li>
+            <li  ><i className="fa-solid fa-cart-plus" /></li>
           </ul>
           :
           <ul className="nav-links" >
-            <li > Home </li>
-            <li > Menu </li>
-            <li > About </li>
-            <li > Contact </li>
-            <li > Messages </li>
+             <li ><Link to="/"> Home </Link> </li>
+            <li>< Link to="/menu"> Menu </Link></li>
+            <li ><Link to="/about"> About</Link> </li>
+            <li ><Link to="/contact"> Contact </Link></li>
+            <li >< Link to="/messages"> Messages </Link></li>
             <li > Logout </li>
            <li><i className="fa-solid fa-cart-plus" /></li>
           </ul>}

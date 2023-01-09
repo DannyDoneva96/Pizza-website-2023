@@ -15,21 +15,24 @@
     flex-direction: row;
    
 }
-.nav-links{ 
+.nav-links { 
    
 
        gap: 60px;
     display: flex;
+    flex-direction: row;
 align-items: center;}
 
-.nav-links li{
+.nav-links li a{
+
+     text-decoration: none;
+
     margin-right: 15px;
 
     text-shadow: 3px 3px 20px #000000,
     -2px 1px 30px #000000;   
      color:rgb(0, 0, 0);
      font-size: 24px;
- text-decoration: none;
  font-family: 'Caveat', cursive;
 
 
@@ -39,7 +42,7 @@ align-items: center;}
   /* This is not working and i cant figure out why */
 
 
-.nav-links li:hover{
+  .nav-links li a:hover{
     cursor: url("../../images/cursor-removebg-preview.png"), pointer;
     color:white;
     text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
