@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
-
+import logo from "../../images/logo-nav-new.png"
+import "./Header.css"
 
 export const Header = (props) => {
 
@@ -10,14 +11,14 @@ export const Header = (props) => {
 
        <header className="header">
         <div className="navbar">
-          <div>
-            <img className="logo-nav" src="../../../lissets/images/logo-nav-new.png" />
+          <div >
+            <img  className="logo-nav"src={logo} />
           </div>
           {/*NOT AUTH*/}
           {!user
                    ? 
           <ul className="nav-links" >
-            <li Link to="/"> Home </li>
+            <li > Home </li>
             <li > Menu </li>
             <li > About </li>
             <li> Contact </li>

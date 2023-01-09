@@ -9,7 +9,7 @@ export const Home = (props) => {
 
 
         <div>
-           
+           mjkbhujkgbiu
         </div>)
 
 }

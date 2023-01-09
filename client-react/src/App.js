@@ -1,17 +1,20 @@
-import { Route, Routes ,useNavigate } from 'react-router-dom'
+import "./app-reset.css"
+import { Route, Routes, useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { Header } from './components/Header/Header';
 import { Footer } from './components/Footer/Footer';
-
+import { Home } from './components/Home/Home';
 
 function App() {
   return (
-    <div className="App">
-         <Header />
+    <div className="App" >
+      
+      <Header />
 
 
-<Routes>
-  <Route path="/" element={<Home />} />{/*
+      <Routes>
+
+        <Route path="/" element={<Home />} />{/*
   <Route path="*" element={<ErrorPage />} />
   <Route path="/invitation" element={<Invitation />} />
   <Route path="/logout" element={<Logout />} />
@@ -25,8 +28,8 @@ function App() {
   <Route path="/guest" element={<Guest guest={guest} />} />
   <Route path="/guests/:id" element={<DetailsOfGuest guest={guest} />} />*/}
 
-</Routes>
-<Footer /> 
+      </Routes>
+      <Footer />
     </div>
   );
 }
