@@ -11,6 +11,8 @@ import { Login } from './components/Login/Login';
 import { Messages } from './components/Messages/Messages';
 import { Orders } from './components/Orders/Orders';
 import { Details } from "./components/Details/Details";
+import { Menu } from "./components/Menu/Menu";
+
 
 function App() {
   return (
@@ -29,20 +31,12 @@ function App() {
         <Route path="/messages" element={<Messages />} />
         <Route path="/orders" element={<Orders />} />
         <Route path="/details" element={<Details />} />
+        <Route path="/menu" element={<Menu />} />
 
-        {/*
-  <Route path="/invitation" element={<Invitation />} />
-  <Route path="/logout" element={<Logout />} />
 
-  <Route path="/rsvp" element={<RSVP addGuestHandler={addGuestHandler} />} />
-  <Route path="/wishingBook" element={<Wishes />} />
-  <Route path="/login" element={<Login />} />
-  <Route path="/create" element={<CreateWish />} />
-  <Route path="/register" element={<Register  />} />
-  <Route path="/guest" element={<Guest guest={guest} />} />
-  <Route path="/guests/:id" element={<DetailsOfGuest guest={guest} />} />*/}
 
       </Routes>
+
       <Footer />
     </div>
   );

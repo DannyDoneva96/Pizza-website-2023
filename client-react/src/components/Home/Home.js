@@ -1,20 +1,20 @@
 import { Link } from 'react-router-dom'
 import combo from '../../images/pizza-images/deals/combo-4family.png'
-import './Home.css' 
+import './Home.css'
 
 export const Home = (props) => {
 
 
-   
-    return (
+
+  return (
 
 
-        <div>
-            <main>
+ 
+      <main className='main-main'>
         <div className="main-home">
           <div className="home">
             <div className="main-content">
-              <h1> Donevis's Pizzeria </h1>
+              <h1 className="h1-home"> Donevis's Pizzeria </h1>
               <p className="home-p"> Do good. Be nice. Order pizza. Repeat.</p>
               <div className="order-btn-parrent">
                 <a className="order-btn glow-on-hover" href='/menu'> ORDER NOW </a>
@@ -23,7 +23,7 @@ export const Home = (props) => {
           </div>
         </div>
         <section className="home-deliv-section">
-          <h2>Easy in <span>three steps... </span></h2>
+          <h2>Easy in <span className="span-home">three steps... </span></h2>
           <div className="steps-container">
             <div className="steps">
               <p className="num">1</p>
@@ -47,11 +47,11 @@ export const Home = (props) => {
                 <a href="/menu/deals/Cl7TJYde1osByGBsOjrm">  <img src={combo} alt="" /></a>
               </div>
               <h3>Combo Deal</h3>
-              <p>pay<span>45.00$</span>instead of<span className="scratch">60.00$</span></p>
+              <p>pay<span className="span-home">45.00$</span >instead of<span className="scratch">60.00$</span></p>
             </div>
           </div>
         </section>
       </main>
-        </div>)
+  )
 
 }

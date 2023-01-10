@@ -28,7 +28,7 @@ export const Login = (props) =>{
               id="password"
             />
           </div>
-          <p>err</p>
+          <p className="perr">err</p>
           <button className="btn-login" type="submit">
             LOGIN
           </button>

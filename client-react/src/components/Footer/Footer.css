@@ -1,4 +1,4 @@
-.footer {
+ .footer {
     color: rgb(0, 0, 0);
     height: 200px;
     background-color: #ffffff;
@@ -7,7 +7,6 @@
     align-items: center;
     flex-direction: column;
     padding-top: 10px;
-    bottom:0;
     width:100%;
     
   }
@@ -21,6 +20,7 @@
   }
   .socialMedia i{
     margin :20px;
+
   }
   .socialMedia i:hover{
     cursor: url("../../images/cursor-removebg-preview.png"), pointer;

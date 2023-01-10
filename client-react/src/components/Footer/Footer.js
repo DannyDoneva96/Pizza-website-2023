@@ -8,7 +8,7 @@ export const Footer = (props) => {
     return (
 
 
-           <footer>
+           <footer className="footer">
     <div className="footer">
         <div className="socialMedia">
             <i className="fa-brands fa-facebook"></i>

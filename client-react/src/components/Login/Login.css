@@ -1,19 +1,19 @@
 .container-login {
     background-color: rgb(211, 211, 211);
-    height: 65vh;
+    /* height: 65vh; */
     margin: 0 auto;
     text-align: center;
 }
-p{
+.perr{
     font-size:2rem;
     color: red;
 }
 
 .content-login {
-padding-top: 3rem;}
+padding: 1rem;}
 
 .section-login {
-    width: 500px;
+    width: 40%;
     padding: 2rem;
     border-radius: 30px;
     background-color: #a1a1a17a;

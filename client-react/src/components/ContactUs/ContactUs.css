@@ -1,10 +1,9 @@
 .cont-contact{
-    height: calc(100vh - 300px);
     display: flex;
     align-items: center;
  }
  .container-Contact{
-    width: 50%;
+    width: 80%;
     margin:auto;
  }
  .form-c{

@@ -1,4 +1,6 @@
-
+.main-main{
+    height: 200vh;
+}
 .main-home{
     background: url("../../images/pizza-bck-new.png") no-repeat center center ; 
     
@@ -9,7 +11,7 @@
    height: 100vh;
    }
 .home{
-    position: relative;
+    /* position: relative; */
     display: flex;
     justify-content: center;
     align-items: left;
@@ -20,7 +22,7 @@
     left: 100px;
     top: 100px;
 }
-h1{
+.h1-home{
 
     font-family: 'Caveat', cursive;
 font-size:110px;
@@ -115,7 +117,7 @@ margin:2rem 5rem;
       color: rgb(0, 0, 0);
       text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
-span{
+.span-home{
 
     font-size: 56px;
     color: rgb(48, 145, 48);
@@ -168,5 +170,6 @@ text-align: center;
     font-size:50px
 }
 .offer-of-the-day span{margin:18px}
-.scratch{text-decoration: line-through;
+.scratch{
+    text-decoration: line-through;
 font-size:40px}
