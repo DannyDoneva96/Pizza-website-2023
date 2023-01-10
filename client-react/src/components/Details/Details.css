@@ -1,0 +1,83 @@
+.product-details-container{
+    background-image: url('../../images//pizza-images/bck/hmm.jpg');
+    background-position: unset;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center; 
+   height: calc(100vh -  79px)
+}
+
+
+
+
+
+
+.pizzaImg-container img{
+    width:400px
+}
+
+.pizzaImg-container{
+   width:400px
+}
+
+
+.product-details-container article{
+    display: flex;
+  margin:auto;
+  gap :2rem;
+  margin-bottom: 100px;
+  align-items: center;
+
+
+
+}
+.product-details-form{
+    border: 2px solid #ccc;
+    border-radius:12px;
+    background-color: #8989893c;
+    height:fit-content;
+    padding:1rem;
+    box-shadow: 0px 0px 24px rgb(0, 0, 0);
+
+}
+.productName{
+    font-size: 62px;
+    font-family: Caveat;
+    padding-bottom: 0.5rem;
+    color: white;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
+fieldset{
+    display: flex;
+    padding-top:0.5rem;
+    margin-bottom:1.5rem;
+
+}
+legend{
+    font-size:30px;
+    padding-bottom:0.2rem
+}
+.cost{
+    margin-bottom:1rem;
+    font-size:30px
+}
+.descr{
+    font-weight:bold;
+    color:red;
+    margin: 0.5rem;
+    max-width:  400px;
+}
+.btn-add{
+    width: 100%;
+    border-radius: 15px;
+}
+span{
+    font-size: 42px;
+    color: red;
+    margin-left: 0.5rem;
+}
+
+.error-mes,.fa-fa-triangle-exclamation {color:rgb(202, 0, 0);
+    font-size:40px
+}
