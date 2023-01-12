@@ -1,58 +1,66 @@
-.main-main{
+.main-main {
     height: 200vh;
 }
-.main-home{
-    background: url("../../images/pizza-bck-new.png") no-repeat center center ; 
-    
+
+.main-home {
+    background: url("../../images/pizza-bck-new.png") no-repeat center center;
+
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-   height: 100vh;
-   }
-.home{
+    height: 100vh;
+}
+
+.home {
     /* position: relative; */
     display: flex;
     justify-content: center;
     align-items: left;
     flex-direction: column;
 }
-.main-content{
-    position:absolute;
+
+.main-content {
+    position: absolute;
     left: 100px;
     top: 100px;
 }
-.h1-home{
+
+.h1-home {
 
     font-family: 'Caveat', cursive;
-font-size:110px;
-color:#fff;
-text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+    font-size: 110px;
+    color: #fff;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 
 }
 
-.home-p{
+.home-p {
     font-family: 'Caveat', cursive;
     font-size: 32px;
-    color:#fff;
+    color: #fff;
     margin: 1rem 1rem;
 
 }
-.order-btn-parrent{width:50% ;
-margin:2rem 5rem;
+
+.order-btn-parrent {
+    width: 50%;
+    margin: 2rem 5rem;
 
 }
-.order-btn{
+
+.order-btn {
 
     border: 0.5px solid rgb(84, 84, 84);
     padding: 0.5rem;
     font-size: 30px;
-    color:#fff;
+    color: #fff;
     background-color: rgba(255, 255, 255, 0.103);
     text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 
 }
-.order-btn:hover{
+
+.order-btn:hover {
     cursor: url("../../images/cursor-removebg-preview.png"), pointer;
 
 }
@@ -69,7 +77,7 @@ margin:2rem 5rem;
     background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
     position: absolute;
     top: -2px;
-    left:-2px;
+    left: -2px;
     background-size: 400%;
     z-index: -1;
     filter: blur(5px);
@@ -101,75 +109,134 @@ margin:2rem 5rem;
     border-radius: 10px;
 }
 
-.home-deliv-section{
-    background-image:url('../../images/pizza-bck-repeat.jpg');
+.home-deliv-section {
+    background-image: url('../../images/pizza-bck-repeat.jpg');
     background-color: rgba(48, 145, 48, 0.263);
     height: fit-content;
 }
 
-.home-deliv-section h2{
+.home-deliv-section h2 {
     background-color: rgba(255, 255, 255, 0.838);
 
-      font-size: 40px;
-      font-family: 'Caveat';
-      padding: 1rem;
-      text-align: center;
-      color: rgb(0, 0, 0);
-      text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+    font-size: 40px;
+    font-family: 'Caveat';
+    padding: 1rem;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
-.span-home{
+
+.span-home {
 
     font-size: 56px;
     color: rgb(48, 145, 48);
     text-shadow: 1px 0 0 rgb(255, 255, 255), 0 -1px 0 rgb(255, 255, 255), 0 1px 0 rgb(255, 255, 255), -1px 0 0 #000;
 }
-.steps-container{
+
+.steps-container {
     background-color: rgba(255, 255, 255, 0.838);
 
     display: flex;
     justify-content: center;
     gap: 2rem;
 }
-.steps{
+
+.steps {
     text-align: center;
-    width:30%;
+    width: 30%;
     background-color: rgba(255, 255, 255, 0.838);
     margin-bottom: 2rem;
-    height:5rem;
+    height: 5rem;
     border-radius: 30px;
-    border: 1px solid rgb(48,145,48);
+    border: 1px solid rgb(48, 145, 48);
 
 }
 
-.num{
-    font-size:66px;
+.num {
+    font-size: 66px;
     color: rgb(48, 145, 48);
     text-shadow: 1px 0 0 rgb(255, 255, 255), 0 -1px 0 rgb(255, 255, 255), 0 1px 0 rgb(255, 255, 255), -1px 0 0 #000;
 
 }
-.offer-of-the-day{
+
+.offer-of-the-day {
     text-align: center;
     background-color: rgba(255, 255, 255, 0.838);
 
 }
-.img-container{
+
+.img-container {
     width: 400px;
     margin: auto;
 }
-.dealOfDay{
+
+.dealOfDay {
     color: rgb(48, 145, 48);
     text-shadow: 1px 0 0 rgb(255, 255, 255), 0 -1px 0 rgb(255, 255, 255), 0 1px 0 rgb(255, 255, 255), -1px 0 0 #000;
-text-align: center;
+    text-align: center;
     font-size: 52px;
     padding: 1rem;
 }
 
-.offer-of-the-day h3{
+.offer-of-the-day h3 {
     padding: 1rem;
     font-weight: bold;
-    font-size:50px
+    font-size: 50px
 }
-.offer-of-the-day span{margin:18px}
-.scratch{
+
+.offer-of-the-day span {
+    margin: 18px
+}
+
+.scratch {
     text-decoration: line-through;
-font-size:40px}
+    font-size: 40px
+}
+
+@media screen and (max-width: 400px) {
+    .img-container {width: unset;}
+    .main-content {
+        position: unset;
+        text-align: center;
+        margin-top: 10%
+    }
+
+    .h1-home {
+        font-size: 3rem
+    }
+
+    .order-btn-parrent {
+        width: 100%;
+        margin: unset;
+        margin-top: 8rem;
+    }
+
+    .order-btn {
+        background-color: rgb(255 255 255 / 35%);
+    }
+
+
+
+    .steps-container {
+
+        gap: 1rem;
+    }
+
+    .steps {
+        height: 7rem;
+
+    }
+    .dealOfDay{font-size: 30px;}
+    .pizzaimg{    width: 375px;}
+    .span-home {
+        font-size: 57px;}
+}
+@media screen and (max-width: 390px) {
+
+    .pizzaimg{    width: 300px;}
+    .h1-home {
+        font-size: 2rem
+    }
+    .img-container {width: unset;}
+
+}

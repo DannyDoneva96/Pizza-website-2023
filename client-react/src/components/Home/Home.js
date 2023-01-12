@@ -44,7 +44,7 @@ export const Home = (props) => {
                 DEAL OF THE DAY
               </h1>
               <div className="img-container">
-                <a href="/menu/deals/Cl7TJYde1osByGBsOjrm">  <img src={combo} alt="" /></a>
+                <a href="/menu/deals/">  <img className="pizzaimg" src={combo} alt="" /></a>
               </div>
               <h3>Combo Deal</h3>
               <p>pay<span className="span-home">45.00$</span >instead of<span className="scratch">60.00$</span></p>

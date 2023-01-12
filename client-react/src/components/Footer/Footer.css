@@ -24,3 +24,9 @@
   .socialMedia i:hover{
     cursor: url("../../images/cursor-removebg-preview.png"), pointer;
   }
+  @media screen and (max-width: 400px) {
+
+    .footer{
+      border-top: 1px solid #ccc;
+    }
+  }
