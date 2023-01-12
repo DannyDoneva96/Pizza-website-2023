@@ -1,12 +1,11 @@
  .footer {
     color: rgb(0, 0, 0);
-    height: 200px;
+    height: 100px;
     background-color: #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding-top: 10px;
     width:100%;
     
   }
@@ -15,11 +14,11 @@
     color: rgb(1, 1, 1);
     
     margin: 20px ;
-    font-size: 70px;
+    font-size: 50px;
     cursor: pointer;
   }
   .socialMedia i{
-    margin :20px;
+    margin :10px;
 
   }
   .socialMedia i:hover{

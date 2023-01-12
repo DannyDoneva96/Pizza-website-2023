@@ -1,27 +1,46 @@
 import './Menu.css'
-import { useState } from 'react'
 import deals from "../../images/pizza-images/icons-menu/320-3204667_pizza-pepperoni-png-transparent-png-removebg-preview.png"
 import pizza from"../../images/pizza-images/icons-menu/png-transparent-pizza-pizza-food-bread-removebg-preview.png"
 import salad from "../../images/pizza-images/icons-menu/salat-icon-removebg-preview.png"
 import drinks from "../../images/pizza-images/icons-menu/drinks-icon-removebg-preview.png"
 import desserts from "../../images/pizza-images/icons-menu/deserts.png"
-import img from "../../images/pizza-images/pizza/margarita.png"
-import img from "../../images/pizza-images/pizza/mexicana.png"
-import img from "../../images/pizza-images/pizza/Miracle.png"
-import img from "../../images/pizza-images/pizza/peperoni.png"
-import img from "../../images/pizza-images/pizza/Quatro-Formajo.png"
+import { db } from '../../firebase'
+import { collection, getDocs, addDoc,updateDoc ,doc,deleteDoc} from 'firebase/firestore'
+import {Product} from "./Product/Product"
+import React, { useRef, useState,useEffect } from "react";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
 
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+
+import "../../styles-swiper.css";
+
+// import required modules
+import { EffectCoverflow, Pagination,  } from "swiper";
 
 
 
 export const Menu = (props) => {
  
-  const [chosenCategory,setChosenCategory]= useState('deals')
+  const [chosenCategory,setChosenCategory]= useState('pizza')
+  const [products, setProducts] = useState([]);
+  const productRef = collection(db, chosenCategory);
 
+  useEffect(() => {
 
+    const getAll = async () => {
+        const data = await getDocs(productRef)
+        setProducts(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+    }
+    getAll()
+}, [chosenCategory]);
+ console.log(products)
    const selectCategory = (category)=>{
+
              setChosenCategory(category)
-             console.log(category)
    }
     return(
         <main className="main-menu">
@@ -58,12 +77,32 @@ export const Menu = (props) => {
           </div>
         </div>
         {/*------------------ Offers menu -----------------------------*/}
-        <div className="todaysDeals">Most Famous...</div>
-        <div className="pizzas-sec-container">
-          <section className="menu-section">
-           
-          </section>
-        </div>
+        <Swiper
+        effect={"coverflow"}
+        grabCursor={true}
+        centeredSlides={true}
+        slidesPerView={"auto"}
+        coverflowEffect={{
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        }}
+        pagination={true}
+        modules={[EffectCoverflow, Pagination]}
+        className="mySwiper"
+      >
+        {/* <SwiperSlide>
+          <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+        </SwiperSlide> */}
+        {products.length > 0 && !undefined
+                        ? products.map(x => <SwiperSlide>
+                             <Product key={x.id} x={x}  /> </SwiperSlide>)
+                         : <p className="noproducts" >No products yet...</p>
+                       
+                    }
+      </Swiper>
       </main>
     )
 }
