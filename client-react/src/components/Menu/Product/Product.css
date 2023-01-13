@@ -18,5 +18,8 @@ font-family:Caveat ;
 
 .swiper-slide-active .btn-o:hover{  
     font-size: 2rem;
-    color:red
+    color:red;
+    cursor: url("../../../images/cursor-removebg-preview.png"), pointer;
+
+
 }
