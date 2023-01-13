@@ -37,7 +37,6 @@ export const Menu = (props) => {
     }
     getAll()
 }, [chosenCategory]);
- console.log(products)
    const selectCategory = (category)=>{
 
              setChosenCategory(category)
