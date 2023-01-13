@@ -1,0 +1,22 @@
+ 
+ .btn-o{
+    display: none;
+ }
+ .swiper-slide-active .btn-o{
+    border: none    ;
+    background-color: transparent;
+    display: block;
+width: 100%;
+text-align: center;
+margin-top:1rem;
+border-radius: 0.5rem;
+padding: 0.1rem;
+font-size:1.5rem;
+font-family:Caveat ;
+
+}
+
+.swiper-slide-active .btn-o:hover{  
+    font-size: 2rem;
+    color:red
+}
