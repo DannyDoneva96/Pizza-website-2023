@@ -1,4 +1,5 @@
 import './ErrorPage.css'
+import oops from '../../images/oops.png'
 
 
 export const ErrorPage = (props) => {
@@ -6,8 +7,9 @@ export const ErrorPage = (props) => {
 
     return(
 
-
-       <h1> Oops Something went wrong!</h1>
-
+        <section  className="sec-er">
+            <div className="div-er"></div>
+       <img className="ops" src={oops} alt="" />
+</section>
     )
 }
