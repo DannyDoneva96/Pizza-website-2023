@@ -23,7 +23,7 @@ export const Register = (props) => {
   const [error, setError] = useState(undefined)
   
   const auth = getAuth()
-  // const  {createUser}  = UserAuth;
+   const  {createUser}  = UserAuth();
   const navigate = useNavigate()
 
   const onChange = (e) => {
@@ -37,7 +37,7 @@ export const Register = (props) => {
     try {
 
       if (registerUser.password === registerUser.confirmPassword) {
-        await createUserWithEmailAndPassword(auth,registerUser.email, registerUser.password);
+        await createUser(auth,registerUser.email, registerUser.password);
         navigate('/')
       }
       setError("Passwords dont match")
