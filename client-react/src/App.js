@@ -15,12 +15,13 @@ import { Messages } from './components/Messages/Messages';
 import { Orders } from './components/Orders/Orders';
 import { Details } from "./components/Details/Details";
 import { Menu } from "./components/Menu/Menu";
+import { AuthContextProvider } from './Context/Auth/authContext'
 
 
 function App() {
   return (
     <div className="App" >
-
+ <AuthContextProvider>
       <Header />
 
 
@@ -43,6 +44,7 @@ function App() {
       </Routes>
 
       <Footer />
+      </AuthContextProvider>
     </div>
   );
 }
