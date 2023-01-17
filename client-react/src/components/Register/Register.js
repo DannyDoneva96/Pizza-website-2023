@@ -37,8 +37,8 @@ export const Register = (props) => {
     try {
 
       if (registerUser.password === registerUser.confirmPassword) {
-        await createUser(auth,registerUser.email, registerUser.password);
-        navigate('/')
+        await createUser(registerUser.email, registerUser.password);
+        navigate('/login')
       }
       setError("Passwords dont match")
 
