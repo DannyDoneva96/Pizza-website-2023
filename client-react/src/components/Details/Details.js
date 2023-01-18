@@ -13,6 +13,7 @@ export const Details = () => {
   const [isDrinks, setDrinks] = useState(false);
   const [isNormalfield, setNormalField] = useState('none');
   const [product, setProduct] = useState([]);
+  const [error, setError] = useState('');
 
   const { id ,category} = useParams()
   
@@ -100,31 +101,22 @@ export const Details = () => {
           </fieldset>
           : null}
 
-          <fieldset style={{display:isNormalfield}} >
+          <form style={{display:isNormalfield}} >
 
 
-            <legend>Select size</legend>
             <div>
-              <input type="radio" id="small" name="size" defaultValue="small" defaultChecked />
-              <label htmlFor="small">fff</label>
+               <label htmlFor="message">If any requirements.. </label><br/>
+              <input type="textarea" id="mesage" name="message"  />
+             
             </div>
-            <div>
-              <input type="radio" id="medium" name="size" defaultValue="medium" />
-              <label htmlFor="medium">fff</label>
-            </div>
-            <div>
-              <input type="radio" id="large" name="size" defaultValue="large" />
-              <label htmlFor="large">fff</label>
-            </div>
-            <div>
-              <input type="radio" id="xxl" name="size" defaultValue="xxl" />
-              <label htmlFor="xxl">fff</label>
-            </div>
-          </fieldset>
+            
+             
+          </form>
           
 
 
-        <div className="error-mes"><i className="fa-solid fa-triangle-exclamation" />err</div>
+       {error ?<div className="error-mes"><i className="fa-solid fa-triangle-exclamation" />err</div> :null} 
+       <br/>
         <button className="btn-add">Add to cart</button>
       </form>
     </article>
