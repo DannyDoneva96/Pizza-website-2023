@@ -1,8 +1,9 @@
 import './Product.css';
 import {Routes, Route, useNavigate} from 'react-router-dom';
-
+import { useState } from 'react';
 
 export const Product = ({x}) => {
+
 
     const navigate = useNavigate();
 
