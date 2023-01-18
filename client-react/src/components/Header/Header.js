@@ -28,7 +28,7 @@ export const Header = (props) => {
             <li>< Link to="/" > Home </Link></li>
             <li ><Link to="/menu" > Menu </Link></li>
             <li ><Link to="/about" > About</Link> </li>
-            <li ><Link to="/contact"> Contact </Link></li>
+            {/* <li ><Link to="/contact"> Contact </Link></li> */}
             <li>< Link to="/login"> Login </Link></li>
             <li>< Link to="/register"> Register</Link> </li>
             <li  ><i className="fa-solid fa-cart-plus" /></li>
@@ -39,7 +39,7 @@ export const Header = (props) => {
             <li ><Link to="/"> Home </Link> </li>
             <li>< Link to="/menu"> Menu </Link></li>
             <li ><Link to="/about"> About</Link> </li>
-            <li ><Link to="/contact"> Contact </Link></li>
+            {/* <li ><Link to="/contact"> Contact </Link></li> */}
             <li >< Link to="/messages"> Messages </Link></li>
             <li ><Link to="/logout"> Logout </Link> </li>
             <li><i className="fa-solid fa-cart-plus" /></li>
@@ -49,9 +49,11 @@ export const Header = (props) => {
             <li ><Link to="/"> Home </Link> </li>
             <li>< Link to="/menu"> Menu </Link></li>
             <li ><Link to="/about"> About</Link> </li>
-            <li ><Link to="/contact"> Contact </Link></li>
+            {/* <li ><Link to="/contact"> Contact </Link></li> */}
             <li >< Link to="/messages"> Messages </Link></li>
             <li ><Link to="/logout"> Logout </Link> </li>
+            <li><i className="fa-solid fa-cart-plus" /></li>
+
             <button onClick={toggleNav}><i className="fa-duotone fa-grip-lines"></i></button>
           </ul>
 

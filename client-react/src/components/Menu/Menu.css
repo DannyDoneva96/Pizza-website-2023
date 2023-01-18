@@ -45,3 +45,12 @@
     background-size: cover;
     height: 110vh;
 }
+.noproducts{
+    font-family: Caveat;
+    text-align: center;
+    padding-top: 3rem;
+    font-size: 3rem;
+    color: white;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+
+}

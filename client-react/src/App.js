@@ -6,7 +6,7 @@ import { Header } from './components/Header/Header';
 import { Footer } from './components/Footer/Footer';
 import { Home } from './components/Home/Home';
 import { About } from './components/About/About';
-import { ContactUs } from './components/ContactUs/ContactUs';
+// import { ContactUs } from './components/ContactUs/ContactUs';
 import { ErrorPage } from './components/ErrorPage/ErrorPage';
 import { Login } from './components/Login/Login';
 import { Register } from './components/Register/Register';
@@ -30,7 +30,7 @@ function App() {
 
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<ContactUs />} />
+        {/* <Route path="/contact" element={<ContactUs />} /> */}
         <Route path="*" element={<ErrorPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
