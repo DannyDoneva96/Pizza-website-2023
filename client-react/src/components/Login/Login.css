@@ -38,6 +38,8 @@ padding:1rem
     border-radius: 15px;
     width: 30%;
     margin:1rem;
+    cursor: url("../../images/cursor-removebg-preview.png"), pointer;
+
 
 }
 .inp-log{

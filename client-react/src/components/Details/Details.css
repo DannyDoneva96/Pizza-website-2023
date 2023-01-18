@@ -71,6 +71,8 @@ legend{
 .btn-add{
     width: 100%;
     border-radius: 15px;
+    cursor: url("../../images/cursor-removebg-preview.png"), pointer;
+
 }
 span{
     font-size: 42px;

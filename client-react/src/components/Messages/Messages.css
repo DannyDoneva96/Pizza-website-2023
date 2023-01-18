@@ -12,7 +12,9 @@
 }
 .del-btn{
     width: 100px;
-    margin-left: 40%;}
+    margin-left: 40%;
+    cursor: url("../../images/cursor-removebg-preview.png"), pointer;
+}
 
 td,tr{
     margin-top :1rem;

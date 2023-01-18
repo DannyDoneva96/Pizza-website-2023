@@ -1,6 +1,8 @@
 .a-menu{
     text-decoration: none;
-    color: black
+    color: black;
+    cursor: url("../../images/cursor-removebg-preview.png"), pointer;
+
 }
 .options {
     display: flex;

@@ -12,11 +12,19 @@ export const Details = () => {
   const [isPizza, setPizza] = useState(true);
   const [isDrinks, setDrinks] = useState(false);
   const [isNormalfield, setNormalField] = useState('none');
+
   const [product, setProduct] = useState([]);
   const [error, setError] = useState('');
 
+  const ordersRef= collection(db, "orders");
   const { id ,category} = useParams()
-  
+
+
+  if(!user){
+    setError('You must be logged in!')
+}
+
+ 
 
   useEffect(() => {
     if (category !== 'pizza') {
@@ -29,7 +37,9 @@ export const Details = () => {
     if(category !== 'pizza'&& category !== 'drinks') {
       setNormalField('block')
     }
-
+    setOrder(state=>({
+      ...state
+  }))
 
   }, []);
   useEffect(() => {
@@ -45,6 +55,32 @@ export const Details = () => {
     getProductData(id,category)
 }, []);
 
+ const [order,setOrder]=useState({
+    productName:product.productName,
+    imgUrl: product.imgUrl,
+    category: product.category,
+    message: '',
+    size:'',
+    uid: user.id
+});
+  
+const onChange=(e)=>{
+  setOrder(state=>({
+      ...state,
+      [e.target.name]:e.target.value
+  }))
+  
+}
+const onSubmit = (e) =>{
+    e.preventDefault()
+    const addOrder = async (order) => {
+      await addDoc(ordersRef, order)
+      
+  }
+
+  addOrder(order)
+}  
+
   return (<div className="product-details-container">
     <article>
       <div className="pizzaImg-container">
@@ -59,19 +95,19 @@ export const Details = () => {
             
             <legend>Select size</legend>
             <div>
-              <input type="radio" id="small" name="size" defaultValue="small" defaultChecked />
+              <input type="radio" id="small" name="size"  onChange={onChange} value={order.size} defaultChecked />
               <label htmlFor="small">Small</label>
             </div>
             <div>
-              <input type="radio" id="medium" name="size" defaultValue="medium" />
+              <input type="radio" id="medium" name="size"  onChange={onChange} value={order.size} />
               <label htmlFor="medium">Medium</label>
             </div>
             <div>
-              <input type="radio" id="large" name="size" defaultValue="large" />
+              <input type="radio" id="large" name="size"  onChange={onChange} value={order.size} />
               <label htmlFor="large">Large</label>
             </div>
             <div>
-              <input type="radio" id="xxl" name="size" defaultValue="xxl" />
+              <input type="radio" id="xxl" name="size"  onChange={onChange} value={order.size} />
               <label htmlFor="xxl">XXL</label>
             </div>
           </fieldset>
@@ -83,41 +119,41 @@ export const Details = () => {
 
             <legend>Select size</legend>
             <div>
-              <input type="radio" id="small" name="size" defaultValue="small" defaultChecked />
+              <input type="radio" id="small" name="size"  onChange={onChange} value={order.size} defaultChecked />
               <label htmlFor="small">Strawberry</label>
             </div>
             <div>
-              <input type="radio" id="medium" name="size" defaultValue="medium" />
+              <input type="radio" id="medium" name="size"  onChange={onChange} value={order.size} />
               <label htmlFor="medium">Chocolate</label>
             </div>
             <div>
-              <input type="radio" id="large" name="size" defaultValue="large" />
+              <input type="radio" id="large" name="size"  onChange={onChange} value={order.size} />
               <label htmlFor="large">Mango</label>
             </div>
             <div>
-              <input type="radio" id="xxl" name="size" defaultValue="xxl" />
+              <input type="radio" id="xxl" name="size"  onChange={onChange} value={order.size}/>
               <label htmlFor="xxl">Apple</label>
             </div>
           </fieldset>
           : null}
 
-          <form style={{display:isNormalfield}} >
+          <div style={{display:isNormalfield}} >
 
 
             <div>
                <label htmlFor="message">If any requirements.. </label><br/>
-              <input type="textarea" id="mesage" name="message"  />
+              <input type="textarea" id="mesage" name="message"  onChange={onChange} value={order.message} />
              
             </div>
             
              
-          </form>
+          </div>
           
 
 
        {error ?<div className="error-mes"><i className="fa-solid fa-triangle-exclamation" />err</div> :null} 
        <br/>
-        <button className="btn-add">Add to cart</button>
+        <button className="btn-add" onClick={onSubmit}>Add to cart</button>
       </form>
     </article>
   </div>)
