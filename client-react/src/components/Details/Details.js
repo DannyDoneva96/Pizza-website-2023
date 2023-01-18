@@ -1,25 +1,29 @@
 import './Details.css'
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef} from 'react';
+import { useParams } from 'react-router-dom';
+
 import { UserAuth } from '../../Context/Auth/authContext';
+import { db } from '../../firebase'
+import { collection, getDocs,getDoc, addDoc,updateDoc ,doc,deleteDoc} from 'firebase/firestore'
 
-
-export const Details = (product) => {
+export const Details = () => {
 
   const { user } = UserAuth();
   const [isPizza, setPizza] = useState(true);
   const [isDrinks, setDrinks] = useState(false);
   const [isNormalfield, setNormalField] = useState('none');
-
+  const { id ,category} = useParams()
+  
 
   useEffect(() => {
-    if (product.category !== 'pizza') {
+    if (category !== 'pizza') {
       setPizza(false);
     }
-    if (product.category == 'drinks') {
+    if (category == 'drinks') {
       setDrinks('drinks');
     }
 
-    if(product.category !== 'pizza'&& product.category !== 'drinks') {
+    if(category !== 'pizza'&& category !== 'drinks') {
       setNormalField('block')
     }
 

@@ -38,7 +38,7 @@ function App() {
 
         <Route path="/messages" element={<Messages />} />
         <Route path="/orders" element={<Orders />} />
-        <Route path="/details" element={<Details />} />
+        <Route path="/details/:category/:id" element={<Details />} />
         <Route path="/menu" element={<Menu />} />
 
 

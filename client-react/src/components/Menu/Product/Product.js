@@ -14,7 +14,7 @@ export const Product = ({x}) => {
          <article className = "pizza-article">
             <img src={x.imgUrl} alt="ghygyh" />
              <h3 className="pizza-name">{x.productName}</h3>
-             <button onClick={  ()=>{ navigate(`/details/${x.id}`)}} className="btn-o">Order</button>
+             <button onClick={  ()=>{ navigate(`/details/${x.category}/${x.id}`)}} className="btn-o">Order</button>
          </article>
     )
 }
