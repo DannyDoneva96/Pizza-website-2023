@@ -12,6 +12,8 @@ export const Details = () => {
   const [isPizza, setPizza] = useState(true);
   const [isDrinks, setDrinks] = useState(false);
   const [isNormalfield, setNormalField] = useState('none');
+  const [product, setProduct] = useState([]);
+
   const { id ,category} = useParams()
   
 
@@ -29,14 +31,26 @@ export const Details = () => {
 
 
   }, []);
+  useEffect(() => {
+    const getProductData = async (id,category) => {
+
+
+        const docRef = doc(db, category ,id);
+        const docSnap = await getDoc(docRef);
+
+            setProduct(docSnap.data());
+     
+    }
+    getProductData(id,category)
+}, []);
 
   return (<div className="product-details-container">
     <article>
       <div className="pizzaImg-container">
-        <img src="{{pizza.imgUrl}}" alt="" />
+        <img src={product.imgUrl} alt="" />
       </div>
       <form className="product-details-form">
-        <h1 name="productName" className="productName">name</h1>
+        <h1 name="productName" className="productName">{product.productName}</h1>
         <p name="description" className="descr">des</p>
        
         {isPizza
