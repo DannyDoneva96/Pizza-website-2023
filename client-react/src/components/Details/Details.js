@@ -19,6 +19,15 @@ export const Details = () => {
   const ordersRef= collection(db, "orders");
   const { id ,category} = useParams()
 
+const [order,setOrder]=useState({
+
+    productName:'',
+    imgUrl: '',
+    category: '',
+    message: '',
+    size:'',
+    uid: ''
+});
 
   if(!user){
     setError('You must be logged in!')
@@ -37,32 +46,30 @@ export const Details = () => {
     if(category !== 'pizza'&& category !== 'drinks') {
       setNormalField('block')
     }
-    setOrder(state=>({
-      ...state
-  }))
 
-  }, []);
-  useEffect(() => {
     const getProductData = async (id,category) => {
 
 
-        const docRef = doc(db, category ,id);
-        const docSnap = await getDoc(docRef);
+      const docRef = doc(db, category ,id);
+      const docSnap = await getDoc(docRef);
 
-            setProduct(docSnap.data());
-     
-    }
-    getProductData(id,category)
-}, []);
-
- const [order,setOrder]=useState({
+          setProduct(docSnap.data());
+   
+  }
+  getProductData(id,category)
+  
+  setOrder({
     productName:product.productName,
-    imgUrl: product.imgUrl,
-    category: product.category,
-    message: '',
-    size:'',
-    uid: user.id
-});
+  imgUrl: product.imgUrl,
+  category: product.category,
+  message: '',
+  size:'',
+  uid: user.uid})
+
+  }, []);
+ 
+
+ 
   
 const onChange=(e)=>{
   setOrder(state=>({
@@ -80,7 +87,6 @@ const onSubmit = (e) =>{
 
   addOrder(order)
 }  
-
   return (<div className="product-details-container">
     <article>
       <div className="pizzaImg-container">
